@@ -736,7 +736,31 @@ void render(void)
   SDL_SetRenderDrawColor(g_window.renderer, 128, 128, 128, 255);
   SDL_RenderClear(g_window.renderer);
 
-  SDL_RenderTexture(g_window.renderer, g_image.texture, &g_image.rect, &g_image.rect);
+  if (g_original_resolution)
+{
+    SDL_RenderTexture(
+        g_window.renderer,
+        g_image.texture,
+        &g_image.rect,
+        &g_image.rect
+    );
+}
+else
+{
+    SDL_FRect destination = {
+        0.0f,
+        0.0f,
+        1024.0f,
+        768.0f
+    };
+
+    SDL_RenderTexture(
+        g_window.renderer,
+        g_image.texture,
+        &g_image.rect,
+        &destination
+    );
+}
 
   SDL_RenderPresent(g_window.renderer);
 
@@ -1061,11 +1085,28 @@ else
 
     SDL_SyncWindow(g_window.window);
 
+    SDL_Rect screen_bounds_1024;
+
+if (SDL_GetDisplayUsableBounds(
+        SDL_GetPrimaryDisplay(),
+        &screen_bounds_1024) &&
+    (1024 > screen_bounds_1024.w ||
+     768 > screen_bounds_1024.h))
+{
+    SDL_SetWindowPosition(
+        g_window.window,
+        0,
+        0
+    );
+}
+else
+{
     SDL_SetWindowPosition(
         g_window.window,
         SDL_WINDOWPOS_CENTERED,
         SDL_WINDOWPOS_CENTERED
     );
+}
 }
 render();
              SDL_Log(

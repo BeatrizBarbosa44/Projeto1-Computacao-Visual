@@ -1,6 +1,14 @@
 // Copyright (c) 2026 Andre Kishimoto - https://kishimoto.com.br/
 // SPDX-License-Identifier: Apache-2.0
-
+/*Projeto 1 - Computação Visual
+ *Processamento de Imagens
+ *
+ * Integrantes: 
+ * Beatriz Aparecida de Mello Barbosa - RA: 10354067
+ * Henrique Jeam Ferreira Lima - RA: 10277156
+ *
+ * Projeto desenvolvido a partir do código base do disponibilizado pelo Prof. Andre Kishimoto
+ */
 //------------------------------------------------------------------------------
 // Exemplo: 05-filter_image
 // O programa carrega o arquivo de imagem indicado na constante IMAGE_FILENAME

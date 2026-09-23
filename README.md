@@ -67,6 +67,18 @@ O projeto possui as seguintes funcionalidades:
 - salvamento da imagem através da tecla `S`.
 
 ---
+## Estrutura do programa
+
+O programa é dividido nas seguintes etapas:
+
+1. Carregamento da imagem
+2. Conversão para RGBA32
+3. Verificação/conversão para escala de cinza
+4. Cálculo do histograma
+5. Cálculo da média e desvio padrão
+6. Classificação de luminosidade e contraste
+7. Equalização do histograma
+8. Atualização das janelas
 
 ## Interface
 
@@ -124,6 +136,7 @@ Os intervalos utilizados pelo grupo foram:
 ```
 
 ---
+
 
 ## Contraste
 

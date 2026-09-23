@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Apache-2.0
 /*Projeto 1 - Computação Visual
  *Processamento de Imagens
- *
+ * Obs: Fizemos o projeto todo pelo VsCode, e somente depois sincronizamos ele aqui no github, por conta disso, não temos muitos commits do codigo aqui.
  * Integrantes: 
  * Beatriz Aparecida de Mello Barbosa - RA: 10354067
  * Henrique Jeam Ferreira Lima - RA: 10277156

@@ -122,6 +122,18 @@ O histograma possui 256 posições, correspondentes aos níveis de intensidade e
 A partir dos valores do histograma são calculadas as informações estatísticas apresentadas na interface.
 
 ---
+## Equalização do histograma
+
+A equalização é realizada através do histograma acumulado (CDF).
+
+Para cada nível de intensidade r, é calculado:
+
+new_value =
+((CDF[r] - CDF_min) * 255) /
+(total_pixels - CDF_min)
+
+O novo valor é limitado ao intervalo [0,255] e escrito
+diretamente na superfície da imagem.
 
 ## Luminosidade
 
